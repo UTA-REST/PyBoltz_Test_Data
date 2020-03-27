@@ -83,7 +83,7 @@ TestsFile['T2/Input/EField'] = 115
 TestsFile['T2/Input/BField_Mag'] = 1.49703468
 TestsFile['T2/Input/BField_Angle'] = 90.0
 TestsFile['T2/Input/Console_Output_Flag'] = 0
-TestsFile['T2/Input/Steady_State_Threshold'] = 40.00
+TestsFile['T2/Input/Steady_State_Threshold'] = 1000000
 TestsFile['T2/Input/Which_Angular_Model'] = 2
 TestsFile['T2/Comparisons'] = 3  # 1 - Compare with Magboltz Data
                                  # 2 - Compare with actual data
