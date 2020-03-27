@@ -43,8 +43,13 @@ TestsFile['T1/Input/Pressure_Torr'] = 750
 TestsFile['T1/Input/EField'] = MBAr[80:81,4][::4][0] # taken from data
 TestsFile['T1/Input/BField_Mag'] = 0.0 
 TestsFile['T1/Input/BField_Angle'] = 0.0 
+TestsFile['T1/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T1/Input/Console_Output_Flag'] = 0 
 TestsFile['T1/Input/Which_Angular_Model'] = 2
+TestsFile['T1/Comparisons'] = 3  # 1 - Compare with Magboltz Data
+                                 # 2 - Compare with actual data
+                                 # 3 - Does both
+
 # Magboltz data
 TestsFile['T1/Output/MBdt'] = MBAr[80:81,13][::4][0]
 TestsFile['T1/Output/MBdtE'] = MBAr[80:81,13][::4][0]*MBAr[80:81,14][::4][0]
@@ -74,7 +79,8 @@ TestsFile['T2/Input/Pressure_Torr'] = 750
 TestsFile['T2/Input/EField'] = 115
 TestsFile['T2/Input/BField_Mag'] = 1.49703468
 TestsFile['T2/Input/BField_Angle'] = 0.0
-TestsFile['T2/Input/Console_Output_Flag'] = 0 
+TestsFile['T2/Input/Console_Output_Flag'] = 0
+TestsFile['T2/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T2/Input/Which_Angular_Model'] = 2
 # Magboltz data
 TestsFile['T2/Output/MBdtr'] = 0.9944e4/0.7509e3
@@ -97,6 +103,7 @@ TestsFile['T3/Input/EField'] = 40000
 TestsFile['T3/Input/BField_Mag'] = 0.0
 TestsFile['T3/Input/BField_Angle'] = 0.0
 TestsFile['T3/Input/Console_Output_Flag'] = 0 
+TestsFile['T3/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T3/Input/Which_Angular_Model'] = 2
 # Nitrogen Alpha data
 TestsFile['T3/Output/AlphaSST'] = Lima[6,1]
