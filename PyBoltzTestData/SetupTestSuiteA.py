@@ -67,6 +67,9 @@ TestsFile['T1/Output/velE'] = ArV[1,1] * 0.3
 
 
 # Second Test
+TestsFile['T2/type'] = 2 # 1 for Dl,Dt and Vel tests
+                         # 2 Bfield test
+                         # 3 Attachment and Ionisation rate tests
 TestsFile['T2/Input/NumberOfGases'] = 2
 TestsFile['T2/Input/MaxNumberOfCollisions'] = 10*40000000.0
 TestsFile['T2/Input/Enable_Penning'] = 0
@@ -93,6 +96,9 @@ TestsFile['T2/Output/dtr'] = P10B[3,1]
 TestsFile['T2/Output/dtrE'] = 0.5 * P10B[3,1]
 
 # Third Test
+TestsFile['T3/type'] = 3 # 1 for Dl,Dt and Vel tests
+                         # 2 Bfield test
+                         # 3 Attachment and Ionisation rate tests
 TestsFile['T3/Input/NumberOfGases'] = 1
 TestsFile['T3/Input/MaxNumberOfCollisions'] = 40000000.0
 TestsFile['T3/Input/Enable_Penning'] = 0
