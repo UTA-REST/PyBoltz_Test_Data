@@ -82,6 +82,9 @@ TestsFile['T2/Input/BField_Angle'] = 0.0
 TestsFile['T2/Input/Console_Output_Flag'] = 0
 TestsFile['T2/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T2/Input/Which_Angular_Model'] = 2
+TestsFile['T2/Comparisons'] = 3  # 1 - Compare with Magboltz Data
+                                 # 2 - Compare with actual data
+                                 # 3 - Does both
 # Magboltz data
 TestsFile['T2/Output/MBdtr'] = 0.9944e4/0.7509e3
 TestsFile['T2/Output/MBdtrE'] = (0.9944e4/0.7509e3) * np.sqrt((magBer[0]/100)**2+(magBer[2]/100)**2)
@@ -105,6 +108,9 @@ TestsFile['T3/Input/BField_Angle'] = 0.0
 TestsFile['T3/Input/Console_Output_Flag'] = 0 
 TestsFile['T3/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T3/Input/Which_Angular_Model'] = 2
+TestsFile['T3/Comparisons'] = 3  # 1 - Compare with Magboltz Data
+                                 # 2 - Compare with actual data
+                                 # 3 - Does both
 # Nitrogen Alpha data
 TestsFile['T3/Output/AlphaSST'] = Lima[6,1]
 TestsFile['T3/Output/AlphaSSTE'] = Lima[6,1]*0.5
