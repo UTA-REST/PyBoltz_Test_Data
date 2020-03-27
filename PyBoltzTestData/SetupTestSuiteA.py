@@ -58,12 +58,12 @@ TestsFile['T1/Output/MBdlE'] = MBAr[80:81,11][::4][0]*MBAr[80:81,12][::4][0]
 TestsFile['T1/Output/MBvel'] = MBAr[80:81,5][::4][0]
 TestsFile['T1/Output/MBvelE'] = MBAr[80:81,5][::4][0] * MBAr[80:81,6][::4][0]
 # Argon data
-TestsFile['T1/Output/dt'] = ArDt[1,1]
-TestsFile['T1/Output/dtE'] = ArDt[1,1] * 0.3
-TestsFile['T1/Output/dl'] = ArDl[1,1]
-TestsFile['T1/Output/dlE'] = ArDl[1,1] * 0.3
-TestsFile['T1/Output/vel'] = ArV[1,1]
-TestsFile['T1/Output/velE'] = ArV[1,1] * 0.3
+TestsFile['T1/Output/dt'] = ArDt[5,1]
+TestsFile['T1/Output/dtE'] = ArDt[5,1] * 0.3
+TestsFile['T1/Output/dl'] = ArDl[5,1]
+TestsFile['T1/Output/dlE'] = ArDl[5,1] * 0.3
+TestsFile['T1/Output/vel'] = ArV[5,1]*10
+TestsFile['T1/Output/velE'] = ArV[5,1] * 0.3 *10
 
 
 # Second Test
