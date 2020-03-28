@@ -111,15 +111,19 @@ TestsFile['T3/Input/Pressure_Torr'] = 750
 TestsFile['T3/Input/EField'] = 40000
 TestsFile['T3/Input/BField_Mag'] = 0.0
 TestsFile['T3/Input/BField_Angle'] = 0.0
-TestsFile['T3/Input/Console_Output_Flag'] = 0 
+TestsFile['T3/Input/Console_Output_Flag'] = 0
 TestsFile['T3/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T3/Input/Which_Angular_Model'] = 2
 TestsFile['T3/Comparisons'] = 2  # 1 - Compare with Magboltz Data
                                  # 2 - Compare with actual data
                                  # 3 - Does both
+n0 = 101325/(1.38e-23*293.15)
+Xfact = (1e-23*n0)/1000
+Yfact = (1e-20*n0/100)
+
 # Nitrogen Alpha data
-TestsFile['T3/Output/AlphaSSTD'] = Lima[6,1]
-TestsFile['T3/Output/AlphaSSTDE'] = Lima[6,1]*0.5
+TestsFile['T3/Output/AlphaSSTD'] = Lima[6,1] * Yfact
+TestsFile['T3/Output/AlphaSSTDE'] = Lima[6,1]*Yfact*0.5
 
 TestsFile['T3/Output/AttSSTD'] = 0.0
 TestsFile['T3/Output/AttSSTDE'] = 9999999
