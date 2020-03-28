@@ -20,6 +20,10 @@ Lima = np.loadtxt("Lima.csv", delimiter=',',skiprows=2)
 magB    = np.array([0.9944e4, 0.8642e4 ,0.7509e3, 0.6307e4, 0.1629e4, 0.1218e4, 0.9223e3, 0.3616e4, 0.2429e4])
 magBer  = np.array([3.87    , 2.31     ,2.62    , 3.39    , 2.92    , 2.60    , 3.43    , 2.79    , 3.13   ])
 
+
+# Test 4 data
+Chanin = np.loadtxt("CHANIN.csv", delimiter=',',skiprows=2)
+
 # Setup Tests.npy
 TestsFile = {'data': 'file'}
 
@@ -123,11 +127,39 @@ Yfact = (1e-20*n0/100)
 
 # Nitrogen Alpha data
 TestsFile['T3/Output/AlphaSSTD'] = Lima[6,1] * Yfact
-TestsFile['T3/Output/AlphaSSTDE'] = Lima[6,1]*Yfact*0.5
+TestsFile['T3/Output/AlphaSSTDE'] = Lima[6,1] * Yfact * 0.5
 
 TestsFile['T3/Output/AttSSTD'] = 0.0
 TestsFile['T3/Output/AttSSTDE'] = 9999999
 
+# Fourth Test
+TestsFile['T4/type'] = 3 # 1 for Dl,Dt and Vel tests
+                         # 2 Bfield test
+                         # 3 Attachment and Ionisation rate tests
+TestsFile['T4/Input/NumberOfGases'] = 1
+TestsFile['T4/Input/MaxNumberOfCollisions'] = 40000000.0
+TestsFile['T4/Input/Enable_Penning'] = 0
+TestsFile['T4/Input/Enable_Thermal_Motion'] = 1
+TestsFile['T4/Input/Max_Electron_Energy'] = 0.0
+TestsFile['T4/Input/GasIDs'] = [15,0,0,0,0,0]
+TestsFile['T4/Input/GasFractions'] = [100,0,0,0,0,0]
+TestsFile['T4/Input/TemperatureCentigrade'] = 23
+TestsFile['T4/Input/Pressure_Torr'] = 750
+TestsFile['T4/Input/EField'] = Chanin[30,0]*250
+TestsFile['T4/Input/BField_Mag'] = 0.0
+TestsFile['T4/Input/BField_Angle'] = 0.0
+TestsFile['T4/Input/Console_Output_Flag'] = 0
+TestsFile['T4/Input/Steady_State_Threshold'] = 40.00
+TestsFile['T4/Input/Which_Angular_Model'] = 2
+TestsFile['T4/Comparisons'] = 2  # 1 - Compare with Magboltz Data
+                                 # 2 - Compare with actual data
+                                 # 3 - Does both
 
+# Nitrogen Alpha data
+TestsFile['T4/Output/AlphaSSTD'] = 0.0
+TestsFile['T4/Output/AlphaSSTDE'] = 9999999
+
+TestsFile['T4/Output/AttSSTD'] =  Chanin[30,1]/((100/(2.686e25)*1e22))
+TestsFile['T4/Output/AttSSTDE'] = Chanin[30,1]/((100/(2.686e25)*1e22)) *0.5
 
 np.save(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Tests"), TestsFile)
