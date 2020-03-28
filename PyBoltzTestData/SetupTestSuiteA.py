@@ -80,7 +80,7 @@ TestsFile['T2/Input/GasFractions'] = [91,9,0,0,0,0]
 TestsFile['T2/Input/TemperatureCentigrade'] = 23
 TestsFile['T2/Input/Pressure_Torr'] = 750
 TestsFile['T2/Input/EField'] = 115
-TestsFile['T2/Input/BField_Mag'] = 1.00231571
+TestsFile['T2/Input/BField_Mag'] = 4.09582689
 TestsFile['T2/Input/BField_Angle'] = 90.0
 TestsFile['T2/Input/Console_Output_Flag'] = 0
 TestsFile['T2/Input/Steady_State_Threshold'] = 1000000
@@ -89,8 +89,8 @@ TestsFile['T2/Comparisons'] = 3  # 1 - Compare with Magboltz Data
                                  # 2 - Compare with actual data
                                  # 3 - Does both
 # Magboltz data
-TestsFile['T2/Output/MBdtr'] = 0.9944e4/0.7509e3
-TestsFile['T2/Output/MBdtrE'] = (0.9944e4/0.7509e3) * np.sqrt((magBer[0]/100)**2+(magBer[2]/100)**2)
+TestsFile['T2/Output/MBdtr'] = 0.9944e4/0.3616e4
+TestsFile['T2/Output/MBdtrE'] = (0.9944e4/0.3616e4) * np.sqrt((magBer[0]/100)**2+(magBer[7]/100)**2)
 # Argon data
 TestsFile['T2/Output/dtr'] = P10B[3,1]
 TestsFile['T2/Output/dtrE'] = 0.5 * P10B[3,1]
