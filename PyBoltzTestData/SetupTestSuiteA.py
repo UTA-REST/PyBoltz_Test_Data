@@ -28,7 +28,7 @@ Chanin = np.loadtxt("CHANIN.csv", delimiter=',',skiprows=2)
 TestsFile = {'data': 'file'}
 
 # Number of tests in the .npy file
-TestsFile['NTests'] = 3
+TestsFile['NTests'] = 4
 
 # setting up the data for the first gas (CF4)
 TestsFile['T1/type'] = 1 # 1 for Dl,Dt and Vel tests
