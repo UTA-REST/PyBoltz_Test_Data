@@ -114,12 +114,16 @@ TestsFile['T3/Input/BField_Angle'] = 0.0
 TestsFile['T3/Input/Console_Output_Flag'] = 0 
 TestsFile['T3/Input/Steady_State_Threshold'] = 40.00
 TestsFile['T3/Input/Which_Angular_Model'] = 2
-TestsFile['T3/Comparisons'] = 3  # 1 - Compare with Magboltz Data
+TestsFile['T3/Comparisons'] = 2  # 1 - Compare with Magboltz Data
                                  # 2 - Compare with actual data
                                  # 3 - Does both
 # Nitrogen Alpha data
-TestsFile['T3/Output/AlphaSST'] = Lima[6,1]
-TestsFile['T3/Output/AlphaSSTE'] = Lima[6,1]*0.5
+TestsFile['T3/Output/AlphaSSTD'] = Lima[6,1]
+TestsFile['T3/Output/AlphaSSTDE'] = Lima[6,1]*0.5
+
+TestsFile['T3/Output/AttSSTD'] = 0.0
+TestsFile['T3/Output/AttSSTDE'] = 9999999
+
 
 
 np.save(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Tests"), TestsFile)
